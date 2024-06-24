@@ -14,6 +14,10 @@ const ContactUs = () => {
         setTab,
         formData,
         submitted,
+        tab1Disabled,
+        tab2Disabled,
+        tab3Disabled,
+        tab4Disabled
     } = useForm();
     return (
         <>
@@ -145,8 +149,9 @@ const ContactUs = () => {
                                             <div className='self-center'>
                                                 <button
                                                     type='button'
+                                                    disabled={tab1Disabled}
                                                     onClick={() => setTab(2)}
-                                                    className='bg-[#002a69] text-white px-8 py-1 rounded-3xl'>
+                                                    className='bg-[#002a69] disabled:opacity-60 text-white px-8 py-1 rounded-3xl'>
                                                     Next
                                                 </button>
                                             </div>
@@ -226,9 +231,10 @@ const ContactUs = () => {
 
                                             <div className='self-center'>
                                                 <button
+                                                    disabled={tab2Disabled}
                                                     type='button'
                                                     onClick={() => setTab(3)}
-                                                    className='bg-[#002a69] text-white px-8 py-1 rounded-3xl'>
+                                                    className='bg-[#002a69]  disabled:opacity-60 text-white px-8 py-1 rounded-3xl'>
                                                     Next
                                                 </button>
                                             </div>
@@ -280,9 +286,10 @@ const ContactUs = () => {
 
                                             <div className='self-center'>
                                                 <button
+                                                    disabled={tab3Disabled}
                                                     type='button'
                                                     onClick={() => setTab(4)}
-                                                    className='bg-[#002a69] text-white px-8 py-1 rounded-3xl'>
+                                                    className='bg-[#002a69]  disabled:opacity-60 text-white px-8 py-1 rounded-3xl'>
                                                     Next
                                                 </button>
                                             </div>
@@ -320,8 +327,9 @@ const ContactUs = () => {
                                             </label>
                                             <div className='self-center lg:self-end'>
                                                 <button
+                                                    disabled={tab4Disabled}
                                                     type='submit'
-                                                    className='bg-[#002a69] text-white px-8 py-2 rounded-xl'>
+                                                    className='bg-[#002a69]  disabled:opacity-60 text-white px-8 py-2 rounded-xl'>
                                                     Submit
                                                 </button>
                                             </div>
