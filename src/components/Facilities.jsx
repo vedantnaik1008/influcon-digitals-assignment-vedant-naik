@@ -84,7 +84,7 @@ const Facilities = () => {
                             xxl:right-16 xxl:-bottom-10  w-full md:w-[200px]  md:h-[200px] llg:-right-1'
                         />
                     </div>
-                    <div className='relative w-full'>
+                    <div className='relative w-full' id='contact'>
                         <h2 className='text-[#002a69] font-playfair text-3xl mb-2 text-center md:absolute md:-right-[90px] md:bottom-16 md:rotate-[270deg] xl:bottom-20 xxl:-right-14'>
                             Contact us
                         </h2>
@@ -134,37 +134,6 @@ const Facilities = () => {
                                     </div>
                                 </div>
                             </label>
-                            {/* <div className='flex flex-col gap-5 justify-between md:flex-row items-center'>
-                                <label
-                                    htmlFor=''
-                                    className='flex flex-col gap-2'>
-                                    <p>Enter Your Event Date:</p>
-                                    <input
-                                        className='bg-white rounded-md w-full p-2'
-                                        type='date'
-                                    />
-                                </label>
-                                <label
-                                    htmlFor=''
-                                    className='flex flex-col gap-2'>
-                                    <p>Location:</p>
-                                    <select
-                                        name=''
-                                        id=''
-                                        className='bg-white rounded-md w-full  p-2'>
-                                        <option value=''></option>
-                                    </select>
-                                </label>
-                            </div>
-                            <label htmlFor='' className='flex flex-col gap-2'>
-                                <p>How did you hear about us?</p>
-                                <select
-                                    name=''
-                                    id=''
-                                    className='bg-white rounded-md w-full p-2'>
-                                    <option value=''></option>
-                                </select>
-                            </label> */}
                             <div className='self-center'>
                                 <button className='bg-[#002a69] text-white px-8 py-1 rounded-3xl'>
                                     Submit

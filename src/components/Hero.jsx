@@ -1,5 +1,6 @@
 import heroWave from '../../public/image/hero-wave.png'
 import heroBed from '../../public/image/hero-bed.png';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
                       Accommodation with Comfort, Community, and Convenience.
                   </p>
                   <button className='mt-4 px-6 py-2 bg-[#FFDF4D] font-medium text-[#002a69] rounded-xl'>
-                      Find my CoTel
+                      <Link to={'/contact-us'}>Find my CoTel</Link>
                   </button>
               </div>
               <div className='relative flex justify-center items-center'>

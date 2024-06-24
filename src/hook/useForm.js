@@ -4,7 +4,7 @@ import useHttp from './useHttp';
 const useForm = () => {
     //
     const [click, setClick] = useState(false);
-    const [tab, setTab] = useState(1);
+    const [tab, setTab] = useState(0);
     const [submitted, setSubmitted] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -16,15 +16,25 @@ const useForm = () => {
         location: '',
         platform: ''
     });
-    const { fetchData ,setData } = useHttp();
+    const { fetchData, setData } = useHttp();
     const handleChange = (e) => {
         setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+    const handleLeftArrow = () => {
+        if(tab === 5 && submitted === true){
+            setSubmitted(false)
+            setTab(4)
+        }else{
+            setTab(tab - 1);
+        }
+        console.log(submitted);
     };
     console.log(formData);
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const tab1Disabled =
         formData.name.length < 3 ||
-        formData.phone.toString().length < 10 || !emailRegex.test(formData.email);
+        formData.phone.toString().length < 10 ||
+        !emailRegex.test(formData.email);
 
     const tab2Disabled = formData.gender.length === '' || !formData.dob;
 
@@ -36,6 +46,7 @@ const useForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
+        setTab(5)
         const newData = {
             id: fetchData.length + 1,
             ...formData
@@ -58,7 +69,8 @@ const useForm = () => {
         tab1Disabled,
         tab2Disabled,
         tab3Disabled,
-        tab4Disabled
+        tab4Disabled,
+        handleLeftArrow
     };
 };
 

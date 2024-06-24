@@ -3,7 +3,9 @@ import logo from '../../public/image/logocotel.png';
 import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
-    const [click, setClick] = useState(false)
+    const [click, setClick] = useState(false);
+    const pathname = window.location.pathname === '#contact'; 
+    console.log(pathname);
     return (
         <header className='p-5 bg-white'>
             <div className='flex justify-between items-center relative'>
@@ -29,9 +31,9 @@ const Header = () => {
                     }>
                     <ul className='flex flex-col gap-8 items-center mt-20'>
                         <li
-                            onClick={() => setClick(false)}
+                            onClick={() =>{ setClick(false); history.pushState(null, null, '/');}}
                             className='text-[#002a69] hover:text-[#FFDF4D]'>
-                            <Link to='/'>Home</Link>
+                            <a href='#contact'>Home</a>
                         </li>
                         <li
                             onClick={() => setClick(false)}
@@ -39,18 +41,23 @@ const Header = () => {
                             <Link to='/explore'>Explore Residences</Link>
                         </li>
                         <li
-                            onClick={() => setClick(false)}
+                            onClick={() =>{ setClick(false); history.pushState(null, null, '/');}}
                             className='text-[#002a69] hover:text-[#FFDF4D]'>
-                            <Link to='/contact-us'>Contact Us</Link>
+                            <a href='#contact'>Contact Us</a>
                         </li>
                     </ul>
                 </nav>
                 <nav className='hidden md:block'>
                     <ul className='flex gap-8 items-center'>
                         <li className='px-8 py-2 rounded-lg text-white bg-[#002a69] hover:text-[#FFDF4D]'>
-                            <NavLink exact to='/' activeClassName='active'>
+                            <a
+                                onClick={() =>
+                                    history.pushState(null, null, '/')
+                                }
+                                href='#contact'
+                                className={`${pathname ? 'active' : ''}`}>
                                 Home
-                            </NavLink>
+                            </a>
                         </li>
                         <li className='px-8 py-2 rounded-lg text-white bg-[#002a69] hover:text-[#FFDF4D]'>
                             <NavLink to='/explore' activeClassName='active'>
@@ -58,9 +65,14 @@ const Header = () => {
                             </NavLink>
                         </li>
                         <li className='px-8 py-2 rounded-lg text-white bg-[#002a69] hover:text-[#FFDF4D]'>
-                            <NavLink to='/contact-us' activeClassName='active'>
+                            <a
+                                onClick={() =>
+                                    history.pushState(null, null, '/')
+                                }
+                                href='#contact'
+                                className={`${pathname ? 'active' : ''}`}>
                                 Contact Us
-                            </NavLink>
+                            </a>
                         </li>
                     </ul>
                 </nav>

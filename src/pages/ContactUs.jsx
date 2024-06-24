@@ -1,7 +1,6 @@
 import leftArrow from '../../public/svg/left-arrow.svg';
 import hero_wave from '../../public/svg/Group 53.svg';
 import correct from '../../public/svg/submiitedc.svg';
-import { Link } from 'react-router-dom';
 import useForm from '../hook/useForm';
 
 const ContactUs = () => {
@@ -17,8 +16,10 @@ const ContactUs = () => {
         tab1Disabled,
         tab2Disabled,
         tab3Disabled,
-        tab4Disabled
+        tab4Disabled,
+        handleLeftArrow
     } = useForm();
+    console.log(tab);
     return (
         <>
             <section className='py-20 hero-waves relative '>
@@ -31,17 +32,18 @@ const ContactUs = () => {
                 </div>
                 <div className='flex flex-col justify-center items-center  py-8 relative z-10'>
                     <div className='flex justify-between items-center'>
-                        <div
-                            className={`${
-                                !click
-                                    ? 'hidden'
-                                    : `absolute z-40 ${
-                                          submitted
-                                              ? 'top-[60%] md:top-[15%]'
-                                              : 'top-[90%] md:top-[31%]'
-                                      } left-1 md:left-10 lg:left-20 `
-                            }`}>
-                            <Link to={'/'}>
+                        {tab === 0 ? null : (
+                            <div
+                                onClick={handleLeftArrow}
+                                className={`${
+                                    !click
+                                        ? 'hidden'
+                                        : `absolute z-40 cursor-pointer ${
+                                              submitted
+                                                  ? 'top-[60%] md:top-[15%]'
+                                                  : 'top-[90%] md:top-[31%]'
+                                          } left-1 md:left-10 lg:left-20 `
+                                }`}>
                                 <img
                                     src={leftArrow}
                                     alt='left-arrow'
@@ -49,54 +51,60 @@ const ContactUs = () => {
                                     width={23}
                                     className='w-6 h-6'
                                 />
-                            </Link>
-                        </div>
+                            </div>
+                        )}
                         <h1 className='text-[#002a69] text-center font-playfair font-extrabold text-3xl max-w-[300px] md:max-w-[550px]  uppercase'>
-                            {submitted
+                            {submitted && tab === 5
                                 ? 'Thank you for contacting us. you will hear from us soon'
                                 : 'Know where you want to stay? contact us'}
                         </h1>
                     </div>
 
-                    {submitted && (
-                        <div className='relative'>
-                            <img
-                                src={correct}
-                                width={100}
-                                height={100}
-                                alt='submitted'
-                                className='mt-10'
-                            />
-                            <svg
-                                className='absolute top-[70px] left-6 h-[40px]'
-                                width='57'
-                                height='47'
-                                viewBox='0 0 57 47'
-                                fill='none'
-                                xmlns='http://www.w3.org/2000/svg'>
-                                <path
-                                    d='M4.21045 30.3278L16.2839 42.4012L52.5043 4.45605'
-                                    stroke='white'
-                                    strokeWidth='8'
-                                    strokeLinecap='round'
-                                    strokeLinejoin='round'
-                                />
-                            </svg>
-                        </div>
-                    )}
+                    {submitted &&
+                        tab === 5 && (
+                                <div className='relative'>
+                                    <img
+                                        src={correct}
+                                        width={100}
+                                        height={100}
+                                        alt='submitted'
+                                        className='mt-10'
+                                    />
+                                    <svg
+                                        className='absolute top-[70px] left-6 h-[40px]'
+                                        width='57'
+                                        height='47'
+                                        viewBox='0 0 57 47'
+                                        fill='none'
+                                        xmlns='http://www.w3.org/2000/svg'>
+                                        <path
+                                            d='M4.21045 30.3278L16.2839 42.4012L52.5043 4.45605'
+                                            stroke='white'
+                                            strokeWidth='8'
+                                            strokeLinecap='round'
+                                            strokeLinejoin='round'
+                                        />
+                                    </svg>
+                                </div>
+                            )}
                 </div>
 
                 {submitted ? null : (
                     <div className='relative flex flex-col justify-center items-center'>
-                        <button
-                            onClick={() => setClick(true)}
-                            className={`${
-                                click
-                                    ? 'hidden'
-                                    : 'px-8 py-2 rounded-lg text-white bg-[#002a69] mt-10'
-                            }`}>
-                            Contact Us
-                        </button>
+                        {tab === 0 && (
+                            <button
+                                onClick={() => {
+                                    setClick(true);
+                                    setTab(1);
+                                }}
+                                className={`${
+                                    click && tab > 0
+                                        ? 'hidden'
+                                        : 'px-8 py-2 rounded-lg text-white bg-[#002a69] mt-10'
+                                }`}>
+                                Contact Us
+                            </button>
+                        )}
                         {click ? (
                             <form
                                 onSubmit={handleSubmit}
