@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.find_your_col_tel{
+background: rgb(255,255,255);
+background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,248,218,1) 50%, rgba(255,255,255,1) 98%);
+}
+
+.hero-waves{
+background: linear-gradient(to bottom, #E2F1FF 20%, #FFFFFF 40%);
+}
+
+.active{
+    color: #FFDF4D;
+}
