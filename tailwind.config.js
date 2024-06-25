@@ -5,7 +5,7 @@ export default {
         extend: {
             backgroundImage: {
                 hero_wave: "url('/image/hero-wave.png')",
-            },
+            }
         },
         fontFamily: {
             playfair: ['Playfair Display', 'serif']
@@ -13,6 +13,7 @@ export default {
         screens: {
             sm: '320px',
             md: '768px',
+            mdd: '923px',
             lg: '992px',
             llg: '1150px',
             xl: '1280px',

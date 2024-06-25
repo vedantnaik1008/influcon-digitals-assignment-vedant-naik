@@ -4,11 +4,17 @@ import lYellow from '../../public/image/LYellow.png';
 import yellowBg from '../../public/image/yellowBg.png';
 import gallery from '../../public/image/gallery.png';
 import lBlue from '../../public/image/lBlue.png';
+import blue_wave from '../../public/image/blue-waves.png';
 import workingProfessionals from '../../public/image/workingProfessionals.png';
 
 const Facilities = () => {
     return (
-        <section className='py-20'>
+        <section className='py-20  md:relative'>
+            <img
+                src={blue_wave}
+                alt='blue-waves'
+                className='hidden md:block md:absolute md:top-[40%] mdd:top-[32%] xxl:top-[29%]  md:left-0 md:z-10'
+            />
             <div className='w-[90%] mx-auto'>
                 <h2 className='text-[#002a69] text-center font-playfair font-bold text-3xl py-10'>
                     Facilities
@@ -24,7 +30,7 @@ const Facilities = () => {
                                 width={item.w}
                                 loading='lazy'
                                 alt={item.title}
-                                className='bg-[#FFDF4D] rounded-full mb-5 drop-shadow-md p-6 object-cover'
+                                className='bg-[#FFDF4D] rounded-full mb-5 drop-shadow-md p-6'
                             />
                             <h3 className='text-[#002a69] text-center'>
                                 {item.title}
@@ -33,25 +39,25 @@ const Facilities = () => {
                     ))}
                 </div>
                 <div className='py-28 flex flex-col justify-center items-center gap-10 md:flex-row md:justify-between'>
-                    <div className='bg-white drop-shadow-md rounded-3xl'>
+                    <div className='bg-white drop-shadow-md rounded-3xl md:relative md:z-20'>
                         <img
                             src={Students}
                             alt='students'
                             width={600}
                             height={600}
                         />
-                        <h3 className='py-7 text-center text-[#002a69] font-medium'>
+                        <h3 className='py-7 text-center text-[#002a69] text-2xl font-medium'>
                             For Students
                         </h3>
                     </div>
-                    <div className='bg-white drop-shadow-md rounded-3xl'>
+                    <div className='bg-white drop-shadow-md rounded-3xl md:relative md:z-20'>
                         <img
                             src={workingProfessionals}
                             alt='working professionals'
                             width={600}
                             height={600}
                         />
-                        <h3 className='py-7 text-center text-[#002a69] font-medium'>
+                        <h3 className='py-7 text-center text-[#002a69] text-2xl font-medium'>
                             For Working Professionals
                         </h3>
                     </div>

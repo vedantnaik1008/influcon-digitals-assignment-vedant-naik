@@ -15,7 +15,7 @@ const Hero = () => {
                       Discover the Best Student and Working Professionals
                       Accommodation with Comfort, Community, and Convenience.
                   </p>
-                  <button className='mt-4 px-6 py-2 bg-[#FFDF4D] font-medium text-[#002a69] rounded-xl'>
+                  <button className='mt-4 px-6 py-2 bg-[#FFDF4D] text-[#002a69] rounded-xl'>
                       <Link to={'/contact-us'}>Find my CoTel</Link>
                   </button>
               </div>
