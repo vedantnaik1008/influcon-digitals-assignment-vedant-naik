@@ -102,7 +102,7 @@ const Facilities = () => {
                             className='hidden md:absolute md:block md:w-[250px] md:-right-8 md:-top-8 w-full  xl:-top-12 xxl:right-1'
                         />
                         <form
-                            onSubmit={''}
+                            onSubmit={handleSubmit}
                             className='bg-[#E2F1FF] rounded-md px-3 py-5 md:px-5 md:py-8 flex flex-col gap-5 text-[#002a69] md:max-w-[500px] mx-auto'>
                             <label className='flex flex-col gap-2'>
                                 <p>Enter Your Full Name:</p>
