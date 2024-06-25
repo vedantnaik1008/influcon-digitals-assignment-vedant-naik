@@ -16,7 +16,7 @@ const useForm = () => {
         location: '',
         platform: ''
     });
-    const { fetchData, setData } = useHttp();
+    const { setData } = useHttp();
     const handleChange = (e) => {
         setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     };
@@ -48,12 +48,24 @@ const useForm = () => {
         setSubmitted(true);
         setTab(5)
         const newData = {
-            id: fetchData.length + 1,
+            id: formData.email,
             ...formData
         };
         setData(newData);
+        if(submitted === true){
+            setFormData({
+                name: '',
+                phone: 0,
+                email: '',
+                gender: '',
+                dob: '',
+                relocationDate: '',
+                location: '',
+                platform: ''
+            });
+        }
         console.log(formData);
-        console.log(fetchData);
+        // console.log(fetchData);
     };
     return {
         handleChange,

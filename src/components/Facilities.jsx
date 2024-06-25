@@ -6,8 +6,10 @@ import gallery from '../../public/image/gallery.png';
 import lBlue from '../../public/image/lBlue.png';
 import blue_wave from '../../public/image/blue-waves.png';
 import workingProfessionals from '../../public/image/workingProfessionals.png';
+import useForm from '../hook/useForm';
 
 const Facilities = () => {
+    const { handleSubmit, handleChange, formData, tab1Disabled } = useForm()
     return (
         <section className='py-20  md:relative'>
             <img
@@ -100,48 +102,72 @@ const Facilities = () => {
                             className='hidden md:absolute md:block md:w-[250px] md:-right-8 md:-top-8 w-full  xl:-top-12 xxl:right-1'
                         />
                         <form
-                            action=''
+                            onSubmit={''}
                             className='bg-[#E2F1FF] rounded-md px-3 py-5 md:px-5 md:py-8 flex flex-col gap-5 text-[#002a69] md:max-w-[500px] mx-auto'>
-                            <label htmlFor='' className='flex flex-col gap-2'>
+                            <label className='flex flex-col gap-2'>
                                 <p>Enter Your Full Name:</p>
                                 <input
                                     className='bg-white rounded-md w-full  p-2'
                                     type='text'
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    name='name'
                                 />
                             </label>
                             <label htmlFor='' className='flex flex-col gap-2'>
                                 <p>Enter Your Phone Number:</p>
                                 <input
                                     className='bg-white rounded-md w-full  p-2'
-                                    type='text'
+                                    type='tel'
+                                    value={Number(formData.phone)}
+                                    onChange={handleChange}
+                                    name='phone'
                                 />
                             </label>
                             <label htmlFor='' className='flex flex-col gap-2'>
                                 <p>Enter Your Email Address:</p>
                                 <input
                                     className='bg-white rounded-md w-full  p-2'
-                                    type='text'
+                                    type='email'
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    name='email'
                                 />
                             </label>
                             <label htmlFor='' className='flex flex-col gap-2'>
                                 <p>Select your Gender</p>
                                 <div className='flex gap-4'>
                                     <div className='flex gap-2'>
-                                        <input className='' type='radio' />
+                                        <input
+                                            type='radio'
+                                            value={(formData.gender = 'Male')}
+                                            onChange={handleChange}
+                                            name='gender'
+                                        />
                                         <p className='text-[#002a69]'>Male</p>
                                     </div>
                                     <div className='flex gap-2'>
-                                        <input className='' type='radio' />
+                                        <input
+                                            type='radio'
+                                            value={(formData.gender = 'Female')}
+                                            onChange={handleChange}
+                                            name='gender'
+                                        />
                                         <p className='text-[#002a69]'>Female</p>
                                     </div>
                                     <div className='flex gap-2'>
-                                        <input className='' type='radio' />
+                                        <input
+                                            type='radio'
+                                            value={(formData.gender = 'Other')}
+                                            onChange={handleChange}
+                                            name='gender'
+                                        />
                                         <p className='text-[#002a69]'>Other</p>
                                     </div>
                                 </div>
                             </label>
                             <div className='self-center'>
-                                <button className='bg-[#002a69] text-white px-8 py-1 rounded-3xl'>
+                                <button disabled={tab1Disabled} type='submit' className='bg-[#002a69] text-white px-8 py-1 rounded-3xl'>
                                     Submit
                                 </button>
                             </div>
