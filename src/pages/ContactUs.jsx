@@ -17,6 +17,7 @@ const ContactUs = () => {
         tab,
         setTab,
         formData,
+        show,
         submitted,
         tab1Disabled,
         tab2Disabled,
@@ -46,7 +47,7 @@ const ContactUs = () => {
                         </h1>
                     </div>
 
-                    {submitted && tab === 5 && <Tab5 />}
+                    {show && tab === 5 && <Tab5 />}
                 </div>
 
                 {submitted ? null : (

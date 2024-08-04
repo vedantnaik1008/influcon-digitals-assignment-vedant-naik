@@ -6,15 +6,16 @@ const useForm = () => {
     const [click, setClick] = useState(false);
     const [tab, setTab] = useState(0);
     const [submitted, setSubmitted] = useState(false);
+    const [show, setShow] = useState(false);
     const [formData, setFormData] = useState({
-        name: 'null',
+        name: '',
         phone: 0,
-        email: 'null',
-        gender: 'null',
-        dob: 'null',
-        relocationDate: 'null',
-        location: 'null',
-        platform: 'null'
+        email: '',
+        gender: '',
+        dob: '',
+        relocationDate: '',
+        location: '',
+        platform: ''
     });
     const { setData } = useHttp();
     const handleChange = (e) => {
@@ -75,6 +76,7 @@ const useForm = () => {
             });
         }
         console.log(formData,'data', data);
+        setShow(true);
         setSubmitted(false)
         // console.log(fetchData);
     };
@@ -87,6 +89,7 @@ const useForm = () => {
         setTab,
         setFormData,
         formData,
+        show,
         submitted,
         setSubmitted,
         tab1Disabled,
