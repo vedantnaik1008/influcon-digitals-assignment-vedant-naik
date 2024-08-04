@@ -13,6 +13,7 @@ const Tab4 = ({ handleChange, formData, tab4Disabled }) => {
                     value={formData.platform}
                     onChange={handleChange}
                     className='flex-grow bg-white rounded-md w-full p-2'>
+                    <option value='' defaultValue={''}></option>
                     <option value='twitter.com'>twitter.com</option>
                     <option value='facebook'>facebook</option>
                     <option value='linkedin'>linkedin</option>

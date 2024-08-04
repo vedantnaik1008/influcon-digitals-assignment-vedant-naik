@@ -22,6 +22,7 @@ const Tab3 = ({ handleChange, setTab, formData, tab3Disabled }) => {
                     value={formData.location}
                     onChange={handleChange}
                     className='bg-white rounded-md w-full  p-2'>
+                    <option value="" defaultValue={''}></option>
                     <option value='goa'>goa</option>
                     <option value='west bengal'>west bengal</option>
                     <option value='maharashtra'>maharashtra</option>
