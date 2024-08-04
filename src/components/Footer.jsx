@@ -10,7 +10,7 @@ const Footer = () => {
   return (
       <footer className='py-10 bg-[#002A69] text-white'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center  mx-auto w-[90%]'>
-              <img
+              <img loading='lazy'
                   src={logo}
                   alt='logo'
                   className='rounded-full w-[100px] h-[100px] md:w-[150px] md:h-[150px] object-cover md:justify-self-center'
@@ -21,7 +21,7 @@ const Footer = () => {
                   </h3>
                   <ul className='flex flex-col gap-4 mt-4'>
                       <li className='flex gap-3 items-center'>
-                          <img
+                          <img loading='lazy'
                               src={location}
                               alt='location'
                               width={20}
@@ -30,7 +30,7 @@ const Footer = () => {
                           <p>12 A, Chakraberia Ln Ballygunge, 700019</p>
                       </li>
                       <li className='flex gap-3 items-center'>
-                          <img
+                          <img loading='lazy'
                               src={message}
                               alt='message'
                               width={20}
@@ -39,7 +39,7 @@ const Footer = () => {
                           <p>cotel.arihant@gmail.com</p>
                       </li>
                       <li className='flex gap-3 items-center'>
-                          <img
+                          <img loading='lazy'
                               src={contact}
                               alt='contact'
                               width={20}
@@ -54,7 +54,7 @@ const Footer = () => {
                   <p>Get in Touch with Us:</p>
                   <div className='flex gap-10 items-center'>
                       <a href=''>
-                          <img
+                          <img loading='lazy'
                               src={facebook}
                               alt='facebook'
                               width={10}
@@ -62,7 +62,7 @@ const Footer = () => {
                           />
                       </a>
                       <a href=''>
-                          <img
+                          <img loading='lazy'
                               src={instagram}
                               alt='instagram'
                               width={20}
@@ -70,7 +70,7 @@ const Footer = () => {
                           />
                       </a>
                       <a href=''>
-                          <img
+                          <img loading='lazy'
                               src={linkedin}
                               alt='linkedin'
                               width={20}

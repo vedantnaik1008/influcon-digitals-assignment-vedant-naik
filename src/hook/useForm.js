@@ -7,14 +7,14 @@ const useForm = () => {
     const [tab, setTab] = useState(0);
     const [submitted, setSubmitted] = useState(false);
     const [formData, setFormData] = useState({
-        name: '',
+        name: 'null',
         phone: 0,
-        email: '',
-        gender: '',
-        dob: '',
-        relocationDate: '',
-        location: '',
-        platform: ''
+        email: 'null',
+        gender: 'null',
+        dob: 'null',
+        relocationDate: 'null',
+        location: 'null',
+        platform: 'null'
     });
     const { setData } = useHttp();
     const handleChange = (e) => {
@@ -47,11 +47,21 @@ const useForm = () => {
         e.preventDefault();
         setSubmitted(true);
         setTab(5)
-        const newData = {
-            id: formData.email,
-            ...formData
-        };
-        setData(newData);
+        const data = new FormData()
+        data.append('id', formData.email);
+        data.append('name', formData.name)
+        data.append('phone', formData.phone)
+        data.append('email', formData.email)
+        data.append('gender', formData.gender)
+        data.append('dob', formData.dob)
+        data.append('relocationDate', formData.relocationDate)
+        data.append('location', formData.location)
+        data.append('platform', formData.platform)
+        // const newData = {
+        //     id: data.has('email'),
+        //     ...data
+        // };
+        setData(data);
         if(submitted === true){
             setFormData({
                 name: '',
@@ -64,7 +74,8 @@ const useForm = () => {
                 platform: ''
             });
         }
-        console.log(formData);
+        console.log(formData,'data', data);
+        setSubmitted(false)
         // console.log(fetchData);
     };
     return {
