@@ -29,6 +29,7 @@ const Hero = () => {
                   />
                   <img
                       src={heroBed}
+                      loading='lazy'
                       alt='hero-bed'
                       width={'1152'}
                       height={'474'}
