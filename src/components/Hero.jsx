@@ -1,5 +1,5 @@
 import heroWave from '../../public/image/hero-wave.png'
-import heroBed from '../../public/image/hero-bed.png';
+import heroBed from '../../public/image/hero-bed.webp';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {

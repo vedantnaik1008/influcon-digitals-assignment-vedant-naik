@@ -1,6 +1,6 @@
 import lYellow from '../../public/image/LYellow.png';
 import yellowBg from '../../public/image/yellowBg.png';
-import gallery from '../../public/image/gallery.png';
+import gallery from '../../public/image/gallery.webp';
 import lBlue from '../../public/image/lBlue.png';
 import useForm from '../hook/useForm';
 

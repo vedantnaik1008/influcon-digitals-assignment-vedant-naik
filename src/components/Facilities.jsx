@@ -1,8 +1,8 @@
 import { facilities } from '../data/FacilititesData';
-import Students from '../../public/image/student.png';
+import Students from '../../public/image/student.webp';
 
 import blue_wave from '../../public/image/blue-waves.png';
-import workingProfessionals from '../../public/image/workingProfessionals.png';
+import workingProfessionals from '../../public/image/workingProfessionals.webp';
 
 const Facilities = () => {
     return (
