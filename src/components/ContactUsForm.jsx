@@ -15,19 +15,24 @@ const ContactUsForm = () => {
                         xxl:right-6 xxl:top-20 md:text-2xl lg:text-3xl lg:-right-[60px] md:rotate-[270deg] llg:-right-[40px]'>
                     Gallery
                 </h2>
-                <img loading='lazy'
+                <img
+                    loading='lazy'
                     src={yellowBg}
                     alt='yellowBg'
+                    width={'400'}
+                    height={'400'}
                     className='hidden md:absolute md:block md:-left-6 md:-top-6 lg:-left-3 lg:-top-6
                             xl:left-10 xl:-top-10
                             xxl:left-16 xxl:-top-10 w-full md:w-[50%] md:h-[250px] llg:left-4'
                 />
-                <img loading='lazy'
+                <img
+                    loading='lazy'
                     src={gallery}
                     alt='gallery'
                     className='relative  w-full bg-[#FFDF4D] p-5 md:p-0 md:max-w-[400px] mx-auto'
                 />
-                <img loading='lazy'
+                <img
+                    loading='lazy'
                     src={lYellow}
                     alt='lYellow'
                     className='hidden md:absolute md:block md:-bottom-8 md:-right-12 lg:-bottom-8 lg:-right-6
@@ -39,7 +44,8 @@ const ContactUsForm = () => {
                 <h2 className='text-[#002a69] font-playfair text-3xl mb-2 text-center md:absolute md:-right-[90px] md:bottom-16 md:rotate-[270deg] xl:bottom-20 xxl:-right-14'>
                     Contact us
                 </h2>
-                <img loading='lazy'
+                <img
+                    loading='lazy'
                     src={lBlue}
                     alt='lBlue'
                     className='hidden md:absolute md:block md:w-[250px] md:-right-8 md:-top-8 w-full  xl:-top-12 xxl:right-1'

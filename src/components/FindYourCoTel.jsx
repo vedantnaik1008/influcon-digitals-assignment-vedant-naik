@@ -12,6 +12,7 @@ const FindYourCoTel = () => {
                     width='100%'
                     height='400'
                     loading="lazy"
+                    title="map of west bengal"
                     className='border-none rounded-sm md:w-[70%] md:mx-auto'
                     src='https://maps.google.com/maps?q=Kolkata%2C%20West%20Bengal&t=&z=13&ie=UTF8&iwloc=B&output=embed'
                 />
