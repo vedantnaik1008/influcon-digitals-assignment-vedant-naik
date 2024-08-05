@@ -19,8 +19,8 @@ const ContactUsForm = () => {
                     loading='lazy'
                     src={yellowBg}
                     alt='yellowBg'
-                    width={'400'}
-                    height={'400'}
+                    width={'304'}
+                    height={'250'}
                     className='hidden md:absolute md:block md:-left-6 md:-top-6 lg:-left-3 lg:-top-6
                             xl:left-10 xl:-top-10
                             xxl:left-16 xxl:-top-10 w-full md:w-[50%] md:h-[250px] llg:left-4'
@@ -28,6 +28,8 @@ const ContactUsForm = () => {
                 <img
                     loading='lazy'
                     src={gallery}
+                    width={'400'}
+                    height={'401'}
                     alt='gallery'
                     className='relative  w-full bg-[#FFDF4D] p-5 md:p-0 md:max-w-[400px] mx-auto'
                 />
@@ -35,6 +37,8 @@ const ContactUsForm = () => {
                     loading='lazy'
                     src={lYellow}
                     alt='lYellow'
+                    width={'200'}
+                    height={'200'}
                     className='hidden md:absolute md:block md:-bottom-8 md:-right-12 lg:-bottom-8 lg:-right-6
                             xl:right-8 xl:-bottom-10
                             xxl:right-16 xxl:-bottom-10  w-full md:w-[200px]  md:h-[200px] llg:-right-1'
@@ -47,6 +51,8 @@ const ContactUsForm = () => {
                 <img
                     loading='lazy'
                     src={lBlue}
+                    width={'250'}
+                    height={'244'}
                     alt='lBlue'
                     className='hidden md:absolute md:block md:w-[250px] md:-right-8 md:-top-8 w-full  xl:-top-12 xxl:right-1'
                 />

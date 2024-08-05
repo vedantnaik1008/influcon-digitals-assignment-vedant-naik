@@ -30,8 +30,8 @@ const Hero = () => {
                   <img
                       src={heroBed}
                       alt='hero-bed'
-                      width={100}
-                      height={100}
+                      width={'1152'}
+                      height={'474'}
                       className='absolute bottom-0 left-[10%] w-full hidden md:block md:w-[80%] mx-auto md:h-[80%] xl:h-full object-cover'
                   />
               </div>

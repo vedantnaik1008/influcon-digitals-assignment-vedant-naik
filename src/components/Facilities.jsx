@@ -43,7 +43,7 @@ const Facilities = () => {
                             src={Students}
                             alt='students'
                             width={600}
-                            height={600}
+                            height={397}
                         />
                         <h3 className='py-7 text-center text-[#002a69] text-2xl font-medium'>
                             For Students
@@ -56,7 +56,7 @@ const Facilities = () => {
                             src={workingProfessionals}
                             alt='working professionals'
                             width={600}
-                            height={600}
+                            height={397}
                         />
                         <h3 className='py-7 text-center text-[#002a69] text-2xl font-medium'>
                             For Working Professionals

@@ -13,7 +13,7 @@ const Header = () => {
                     src={logo}
                     alt='logo'
                     width={80}
-                    height={50}
+                    height={42}
                     className='object-cover'
                 />
                 <div
