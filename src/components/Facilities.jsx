@@ -22,14 +22,16 @@ const Facilities = () => {
                         <div
                             key={item.id}
                             className='flex flex-col justify-center items-center'>
-                            <img
-                                loading='lazy'
-                                src={item.img}
-                                height={item.h}
-                                width={item.w}
-                                alt={item.title}
-                                className='bg-[#FFDF4D] rounded-full mb-5 drop-shadow-md p-6'
-                            />
+                            <div className='bg-[#FFDF4D] rounded-full  mb-5 drop-shadow-md p-6'>
+                                <img
+                                    loading='lazy'
+                                    src={item.img}
+                                    height={item.h}
+                                    width={item.w}
+                                    alt={item.title}
+                                    className='w-10 h-10'
+                                />
+                            </div>
                             <h3 className='text-[#002a69] text-center'>
                                 {item.title}
                             </h3>
