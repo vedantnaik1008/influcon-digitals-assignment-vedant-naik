@@ -13,7 +13,7 @@ const useHttp = () => {
                     muteHttpExceptions: true
                 }
             )
-                .then((response) => response.status)
+                .then((response) => response.json())
                 .catch((err) => console.log(err));
         };
         post();
