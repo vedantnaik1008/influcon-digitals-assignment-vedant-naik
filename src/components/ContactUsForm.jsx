@@ -7,7 +7,7 @@ import useForm from '../hook/useForm';
 const ContactUsForm = () => {
     const { handleSubmit, handleChange, formData, tab1Disabled } = useForm();
     return (
-        <div className='pt-10 flex flex-col justify-center items-center gap-20 md:flex-row md:justify-between  w-[90%] mx-auto'>
+        <div id='contact' className='pt-10 flex flex-col justify-center items-center gap-20 md:flex-row md:justify-between  w-[90%] mx-auto'>
             <div className='relative w-full  '>
                 <h2
                     className='text-[#FFDF4D]  text-3xl mb-2 text-center md:absolute md:-right-[75px] md:top-16 
@@ -44,7 +44,7 @@ const ContactUsForm = () => {
                             xxl:right-16 xxl:-bottom-10  w-full md:w-[200px]  md:h-[200px] llg:-right-1'
                 />
             </div>
-            <div className='relative w-full' id='contact'>
+            <div className='relative w-full'>
                 <h2 className='text-[#002a69]  text-3xl mb-2 text-center md:absolute md:-right-[90px] md:bottom-16 md:rotate-[270deg] xl:bottom-20 xxl:-right-14'>
                     Contact us
                 </h2>
