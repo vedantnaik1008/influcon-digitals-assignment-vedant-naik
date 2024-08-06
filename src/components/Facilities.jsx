@@ -60,7 +60,7 @@ const Facilities = () => {
                             width={600}
                             height={397}
                         />
-                        <h3 className='py-7 text-center text-[#002a69] text-2xl font-medium'>
+                        <h3 className='mx-auto w-[95%] py-7 text-center text-wrap text-[#002a69] text-2xl font-medium'>
                             For Working Professionals
                         </h3>
                     </div>
