@@ -35,11 +35,11 @@ const Header = () => {
                             className='text-[#002a69] hover:text-[#FFDF4D]'>
                             <a href='#contact'>Home</a>
                         </li>
-                        <li
+                        {/* <li
                             onClick={() => setClick(false)}
                             className='text-[#002a69] hover:text-[#FFDF4D]'>
                             <Link to='/explore'>Explore Residences</Link>
-                        </li>
+                        </li> */}
                         <li
                             onClick={() =>{ setClick(false); history.pushState(null, null, '/');}}
                             className='text-[#002a69] hover:text-[#FFDF4D]'>
@@ -59,11 +59,11 @@ const Header = () => {
                                 Home
                             </a>
                         </li>
-                        <li className='px-8 py-2 rounded-lg text-white bg-[#002a69] hover:text-[#FFDF4D]'>
+                        {/* <li className='px-8 py-2 rounded-lg text-white bg-[#002a69] hover:text-[#FFDF4D]'>
                             <NavLink to='/explore' activeClassName='active'>
                                 Explore Residences
                             </NavLink>
-                        </li>
+                        </li> */}
                         <li className='px-8 py-2 rounded-lg text-white bg-[#002a69] hover:text-[#FFDF4D]'>
                             <a
                                 onClick={() =>

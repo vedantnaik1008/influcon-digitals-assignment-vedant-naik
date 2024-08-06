@@ -7,7 +7,7 @@ const Hero = () => {
       <section className=' relative lg:h-screen'>
           <div className=''>
               <div className='flex flex-col justify-center items-center  hero-waves py-8'>
-                  <h1 className='text-[#002a69] text-center font-playfair font-extrabold text-xl md:text-3xl max-w-[300px] md:max-w-[670px] uppercase'>
+                  <h1 className='text-[#002a69] text-center  font-extrabold text-xl md:text-3xl max-w-[300px] md:max-w-[670px] uppercase'>
                       Best Hostel service in Kolkata - Experience Premium Living
                       at Cotel
                   </h1>

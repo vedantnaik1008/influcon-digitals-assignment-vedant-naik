@@ -10,7 +10,7 @@ const ContactUsForm = () => {
         <div className='pt-10 flex flex-col justify-center items-center gap-20 md:flex-row md:justify-between  w-[90%] mx-auto'>
             <div className='relative w-full  '>
                 <h2
-                    className='text-[#FFDF4D] font-playfair text-3xl mb-2 text-center md:absolute md:-right-[75px] md:top-16 
+                    className='text-[#FFDF4D]  text-3xl mb-2 text-center md:absolute md:-right-[75px] md:top-16 
                         xl:-right-1 xl:top-20 
                         xxl:right-6 xxl:top-20 md:text-2xl lg:text-3xl lg:-right-[60px] md:rotate-[270deg] llg:-right-[40px]'>
                     Gallery
@@ -45,7 +45,7 @@ const ContactUsForm = () => {
                 />
             </div>
             <div className='relative w-full' id='contact'>
-                <h2 className='text-[#002a69] font-playfair text-3xl mb-2 text-center md:absolute md:-right-[90px] md:bottom-16 md:rotate-[270deg] xl:bottom-20 xxl:-right-14'>
+                <h2 className='text-[#002a69]  text-3xl mb-2 text-center md:absolute md:-right-[90px] md:bottom-16 md:rotate-[270deg] xl:bottom-20 xxl:-right-14'>
                     Contact us
                 </h2>
                 <img

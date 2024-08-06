@@ -14,7 +14,7 @@ const Facilities = () => {
                 className='hidden md:block md:absolute md:bottom-[25%] md:left-0 md:z-10'
             />
             <div className='w-[90%] mx-auto'>
-                <h2 className='text-[#002a69] text-center font-playfair font-bold text-3xl py-10'>
+                <h2 className='text-[#002a69] text-center  font-bold text-3xl py-10'>
                     Facilities
                 </h2>
                 <div className='flex flex-col md:flex-row md:gap-10 justify-center items-center gap-8 flex-wrap'>

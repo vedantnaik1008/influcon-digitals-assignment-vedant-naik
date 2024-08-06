@@ -19,7 +19,7 @@ const Footer = () => {
                   className='rounded-full w-[100px] h-[100px] md:w-[150px] md:h-[150px] object-cover md:justify-self-center'
               />
               <div className='md:justify-self-center'>
-                  <h3 className='font-playfair text-white text-2xl font-medium mb-3'>
+                  <h3 className=' text-white text-2xl font-medium mb-3'>
                       Contact Us :
                   </h3>
                   <ul className='flex flex-col gap-4 mt-4'>

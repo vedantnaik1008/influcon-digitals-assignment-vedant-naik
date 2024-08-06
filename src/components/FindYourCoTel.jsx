@@ -5,7 +5,7 @@ const FindYourCoTel = () => {
     return (
         <section className='py-20 find_your_col_tel'>
             <div className=' w-[90%] mx-auto'>
-                <h2 className='text-[#002a69] text-center font-playfair font-bold text-3xl py-10'>
+                <h2 className='text-[#002a69] text-center  font-bold text-3xl py-10'>
                     Find Your Co-Tel
                 </h2>
                 <iframe

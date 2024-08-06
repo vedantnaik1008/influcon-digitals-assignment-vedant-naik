@@ -40,7 +40,7 @@ const ContactUs = () => {
                 <div className='flex flex-col justify-center items-center  py-8 relative z-10'>
                     <div className='flex justify-between items-center'>
                         {tab === 0 ? null : <LeftArrow click={click} submitted={submitted} handleLeftArrow={handleLeftArrow}/>}
-                        <h1 className='text-[#002a69] text-center font-playfair font-extrabold text-3xl max-w-[300px] md:max-w-[550px]  uppercase'>
+                        <h1 className='text-[#002a69] text-center font-extrabold text-3xl max-w-[300px] md:max-w-[550px]  uppercase'>
                             {submitted && tab === 5
                                 ? 'Thank you for contacting us. you will hear from us soon'
                                 : 'Know where you want to stay? contact us'}
